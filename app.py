@@ -1,9 +1,7 @@
 #!/usr/bin/python3
 
 from pathlib import Path
-from sys import argv
 from subprocess import call
-
 
     
 def main(directory, file_ext):    
@@ -11,7 +9,7 @@ def main(directory, file_ext):
 
     files = list(path.rglob("*.{}".format(file_ext)))
 
-    l = ["vim"]
+    l = ["vi"]
     l += [str(files[0]), "-c"]
     cmd_str = ""
     for i, fn in enumerate(files[1:-1]):
